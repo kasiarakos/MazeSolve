@@ -1,0 +1,19 @@
+The maze is read from the "kasiarakos.txt" file.
+
+each square of the maze is represented with an integer.
+
+9 --> is the start.
+1 --> is the target.
+0 --> the safe position where the robot can move.
+4 --> the walls of the maze.
+
+When the program starts it is created the Maze in an array @mazeArray. 
+the robot starts to looking for possible position where it can move,
+the possible positions are these with values < 2 
+each position it follows changes value according the (variable) weight.
+Every time that the robot reaches a deadend the according coordinate value
+is changes to 3.
+the Robot stops the search when it finds the coordinate with value 1.
+The path it followed are the coordinates with value greater than 9 with asceding order.
+
+Finally the @sortestSolution method finds the sortest path from the start to the end.
