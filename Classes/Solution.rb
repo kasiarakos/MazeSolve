@@ -4,15 +4,12 @@ class Solution
   
   def initialize
     @solution = Array.new
-    
   end
   
   def buildSteps
-    @steps    = Array.new
-    tempSolution = @solution
-
-    while !solution.empty?
-      @steps.push(@solution.pop)
+    @steps = Array.new
+    (0..@solution.length-1).each do |s|
+      @steps = @steps << "("+@solution[s].row.to_s+","+@solution[s].col.to_s+")"
     end
   end
   
@@ -28,7 +25,7 @@ class Solution
     @solution.last
   end
   
-  def getSteps
+  def steps
     @steps
   end
 end
